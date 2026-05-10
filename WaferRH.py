@@ -314,7 +314,8 @@ class WaferRH(object):
             self.reception_data = True #Déblocage des autres thread
             messagebox.showerror("Erreur", "Erreur durant la réception d'un message BLE, retour menu principal") #Affichage message 
             #Sécurité pour les autres thread
-            self.mesure_live_en_cours == False #Arret thread mesure_live_en_cours
+            self.mesure_live_en_cours = False #Arret thread mesure_live_en_cours
+            self.bool_refresh_window_datalogger = False #Arret thread refresh
             self.set_window_select_comm_channel() #Retour menu principal
         
 ##############################################################################################################################################################################################################################
